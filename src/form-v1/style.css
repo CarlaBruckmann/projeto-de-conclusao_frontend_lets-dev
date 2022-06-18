@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+:root {
+  --color-preto: #201e1f;
+  --color-cinza: #e5e5e5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: "Montserrat", -apple-system, "Roboto", sans-serif;
+  color: var(--color-preto);
+  font-weight: 400;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  padding: 90px;
+}
+#container h1 {
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 60px;
+}
+#container h2 {
+  text-align: center;
+}
+#container p#instrucao {
+  text-align: center;
+  margin: 20px 0 60px 0;
+}
+#container img {
+  width: 100%;
+  max-width: 600px;
+}
+#container hr {
+  background: var(--color-cinza);
+  height: 1px;
+  width: 100%;
+  margin: 100px 0 35px 0;
+}
+#container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form p#aviso {
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+form p#aviso strong {
+  font-weight: 600;
+}
+form div.column-input {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 70px;
+}
+form label {
+  font-weight: 500;
+}
+.column-input input[type="text"],
+input[type="number"],
+input[type="submit"],
+select,
+textarea,
+button {
+  /*padroniza os estilos de inout*/
+  border: 1px solid var(--color-preto);
+  padding: 10px;
+  height: 35px;
+}
+form .row {
+  display: flex;
+  width: 100%;
+  gap: 60px;
+}
+.column-input.input-text {
+  width: 100%;
+}
+.column-input.select select {
+  padding: 0 5px;
+}
+form .row-selectors {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+form .row-selectors input[type="radio"] {
+  width: 25px;
+  height: 25px;
+}
+form .row-selectors label {
+  font-weight: 400;
+}
+form textarea {
+  min-height: 100px;
+  max-height: 200px;
+  min-width: 50%;
+  max-width: 100%;
+}
+form button {
+  padding: 5px 20px;
+}

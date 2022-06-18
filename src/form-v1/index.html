@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Dev</title>
+    <link rel="stylesheet" href="./style.css " />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Formulário 2ª Edição</h1>
+      <h2>
+        Seja bem-vindo(a) ao primeiro desafio da sua jornada de aprendizado!
+      </h2>
+      <p id="instrucao">
+        Preencha corretamente os campos abaixo para ingressar nessa SUPER
+        JORNADA com o time Paipe!
+      </p>
+      <img src="./lets-dev.png" alt="Imagem logotipo do Let's Dev" />
+      <hr />
+      <form onsubmit="enviarFormulario()">
+        <p id="aviso">
+          <strong>ATENÇÃO:</strong>os campos contendo o asterisco (*) são de
+          preenchimento obrigatório!
+        </p>
+        <div class="row">
+          <div class="column-input input-text">
+            <label> Nome Completo: * </label>
+            <input
+              type="text"
+              name="nome"
+              placeholder="Digite seu nome aqui"
+              required
+            />
+          </div>
+          <div class="column-input">
+            <label>Idade:</label>
+            <input
+              type="number"
+              name="idade"
+              min="1"
+              placeholder="Digite a sua idade"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-input select">
+            <label>Ocupação:</label>
+            <select name="ocupacao">
+              <option value="não-declarado">Selecione a sua ocupação</option>
+              <option value="estudante">Estudante</option>
+              <option value="trabalhador-clt">Trabalhador CLT</option>
+              <option value="trabalhador-pj">Trabalhador PJ</option>
+              <option value="autonomo">Autônomo</option>
+              <option value="outro">Outros</option>
+            </select>
+          </div>
+
+          <div class="column-input">
+            <label for="area-preferencia">Área de Preferência: </label>
+            <div class="row" style="gap: 25px">
+              <div class="row-selectors">
+                <input
+                  type="radio"
+                  name="area-preferencia"
+                  id="front"
+                  value="Front-end"
+                  checked
+                />
+                <label for="front">Front-end</label>
+              </div>
+              <div class="row-selectors">
+                <input
+                  type="radio"
+                  name="area-preferencia"
+                  id="back"
+                  value="Back-end"
+                />
+                <label for="back">Back-end</label>
+              </div>
+              <div class="row-selectors">
+                <input
+                  type="radio"
+                  name="area-preferencia"
+                  id="full"
+                  value="Full stack"
+                />
+                <label for="full">Full stack</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-input">
+          <label>Anexar currículo:</label>
+          <input type="file" name="curriculo" multiple />
+        </div>
+        <div class="column-input" style="margin-bottom: 50px">
+          <label for="descricao-perfil"
+            >Descrição do perfil do candidato:</label
+          >
+          <textarea
+            name="descricao-perfil"
+            placeholder="Nos fale um pouco sobre seu perfil pessoal e profissional"
+          ></textarea>
+        </div>
+        <div class="column-input" style="margin-bottom: 115px">
+          <div class="row-selectors">
+            <input type="checkbox" name="receber-email" id="receber-email" />
+            <label for="receber-email"
+              >Desejo receber notificações sobre vagas por e-mail.
+            </label>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-between">
+          <button onclick="cancelar()">Cancelar</button>
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
