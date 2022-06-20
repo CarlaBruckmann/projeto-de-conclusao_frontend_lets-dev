@@ -3,8 +3,8 @@
 :root {
   --color-preto: #201e1f;
   --color-cinza: #e5e5e5;
+  --color-roxo: #7d2eba;
 }
-
 * {
   padding: 0;
   margin: 0;

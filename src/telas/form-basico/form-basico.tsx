@@ -11,7 +11,6 @@ const FormBasico: React.FC = () => {
       }
     } else return tag[0];
   }
-
   function enviarFormulario(event: FormEvent) {
     event.preventDefault();
 

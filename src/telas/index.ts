@@ -1,2 +1,3 @@
 import  FormBasico  from './form-basico/form-basico';
-export { FormBasico };
+import FormCompleto from './form-completo/form-completo';
+export { FormBasico, FormCompleto };
