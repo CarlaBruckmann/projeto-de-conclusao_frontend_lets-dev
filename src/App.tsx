@@ -1,10 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MyContext } from "./contexto";
 import { FormBasico, FormCompleto, Home, ConsumindoApis } from "./telas";
 
 function App() {
-  const [nomeUsuario, setNomeUsuario] = useState("");
+  const [nomeUsuario, setNomeUsuario] = useState<string>();
+
+  useEffect(() => {
+    if (!nomeUsuario) {
+      let nomeDoLocalStorage = localStorage.getItem("nomeUsuario");
+      if (nomeDoLocalStorage) {
+        setNomeUsuario(nomeDoLocalStorage);
+      } else {
+        let nomeInformado = prompt("Por favor, digite seu nome:");
+        if (nomeInformado) setNomeUsuario(nomeInformado);
+      }
+    } else {
+      localStorage.setItem("nomeUsuario", nomeUsuario);
+    }
+  }, [nomeUsuario]);
   return (
     <MyContext.Provider value={{ nomeUsuario, setNomeUsuario }}>
       <BrowserRouter>

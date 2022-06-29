@@ -1,6 +1,3 @@
 import React from "react";
 
-export const MyContext = React.createContext({
-  nomeUsuario: "",
-  setNomeUsuario: () => {},
-});
+export const MyContext = React.createContext<any>({});

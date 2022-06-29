@@ -84,14 +84,14 @@ export const Column = styled.div`
     font-weight: 600;
     font-size: 28px;
     line-height: 26px;
-    color: #7d2eba;
+    color: var(--color-roxo);
   }
 
   p {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    color: #201e1f;
+    color: var(--color-preto);
   }
 `;
 

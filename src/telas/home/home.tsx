@@ -7,17 +7,11 @@ import {
   InputButton,
 } from "../../componentes";
 import { Logo } from "../../imagens";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MyContext } from "../../contexto";
 
 const Home = () => {
-  //Acessar o context:
   const { nomeUsuario, setNomeUsuario } = useContext(MyContext);
-  console.log(nomeUsuario);
-
-  useEffect(() => {
-    setNomeUsuario("Carla");
-  }, []);
 
   const telas = [
     {
@@ -58,10 +52,13 @@ const Home = () => {
     <s.Container>
       <Header />
       <s.Banner>
-        <h1>Que prazer te ver aqui, Fulano!</h1>
+        <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
+        <button onClick={() => localStorage.removeItem("nomeUsuario")}>
+          Remover Nome do Usuário
+        </button>
         <img src={Logo} />
         <h2>
-          Seja bem-vindo(a) ao Let’s Dev! O evento que vai transformar sua
+          Seja bem-vindo(a) ao Lets Dev! O evento que vai transformar sua
           carreira.
         </h2>
         <p>
