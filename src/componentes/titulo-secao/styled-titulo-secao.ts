@@ -7,12 +7,12 @@ export const Container = styled.div`
     font-weight: 600;
     font-size: 32px;
     line-height: 26px;
-    color: #7d2eba;
+    color: var(--color-roxo);
   }
 
   hr {
     height: 1px;
-    background: #e5e5e5;
+    background: var(--color-cinza);
     margin: 40px 0 60px 0;
   }
 `;

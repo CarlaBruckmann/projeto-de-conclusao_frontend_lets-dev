@@ -9,7 +9,7 @@ export const Container = styled.a`
     font-weight: 600;
     font-size: 16px;
     line-height: 26px;
-    color: #7d2eba;
+    color: var(--color-roxo);
     margin: 20px 0;
 
     :hover {
@@ -21,6 +21,6 @@ export const Container = styled.a`
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
-    color: #201e1f;
+    color: var(--color-preto);
   }
 `;
