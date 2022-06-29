@@ -7,8 +7,18 @@ import {
   InputButton,
 } from "../../componentes";
 import { Logo } from "../../imagens";
+import { useContext, useEffect } from "react";
+import { MyContext } from "../../contexto";
 
 const Home = () => {
+  //Acessar o context:
+  const { nomeUsuario, setNomeUsuario } = useContext(MyContext);
+  console.log(nomeUsuario);
+
+  useEffect(() => {
+    setNomeUsuario("Carla");
+  }, []);
+
   const telas = [
     {
       titulo: "Formulário em HTML e CSS",
