@@ -1,5 +1,6 @@
 import React, { FormEvent } from "react";
 import { Logo } from "../../imagens";
+import { Header } from "../../componentes";
 import "./styles-form-basico.css";
 
 const FormBasico: React.FC = () => {
@@ -38,116 +39,119 @@ const FormBasico: React.FC = () => {
     alert("Cancelando...");
   };
   return (
-    <div id="container">
-      <h1>Formulário 2ª Edição</h1>
-      <h2>
-        Seja bem-vindo(a) ao primeiro desafio da sua jornada de aprendizado!
-      </h2>
-      <p id="instrucao">
-        Preencha corretamente os campos abaixo para ingressar nessa SUPER
-        JORNADA com o time Paipe!
-      </p>
-      <img src={Logo} alt="Imagem logotipo do Let's Dev" />
-      <hr />
-      <form onSubmit={enviarFormulario}>
-        <p id="aviso">
-          <strong>ATENÇÃO:</strong>os campos contendo o asterisco (*) são de
-          preenchimento obrigatório!
+    <>
+      <Header />
+      <div id="container">
+        <h1>Formulário 2ª Edição</h1>
+        <h2>
+          Seja bem-vindo(a) ao primeiro desafio da sua jornada de aprendizado!
+        </h2>
+        <p id="instrucao">
+          Preencha corretamente os campos abaixo para ingressar nessa SUPER
+          JORNADA com o time Paipe!
         </p>
-        <div className="row">
-          <div className="column-input input-text">
-            <label> Nome Completo: * </label>
-            <input
-              type="text"
-              name="nome"
-              placeholder="Digite seu nome aqui"
-              required
-            />
+        <img src={Logo} alt="Imagem logotipo do Let's Dev" />
+        <hr />
+        <form onSubmit={enviarFormulario}>
+          <p id="aviso">
+            <strong>ATENÇÃO:</strong>os campos contendo o asterisco (*) são de
+            preenchimento obrigatório!
+          </p>
+          <div className="row">
+            <div className="column-input input-text">
+              <label> Nome Completo: * </label>
+              <input
+                type="text"
+                name="nome"
+                placeholder="Digite seu nome aqui"
+                required
+              />
+            </div>
+            <div className="column-input">
+              <label>Idade:</label>
+              <input
+                type="number"
+                name="idade"
+                min="1"
+                placeholder="Digite a sua idade"
+              />
+            </div>
           </div>
-          <div className="column-input">
-            <label>Idade:</label>
-            <input
-              type="number"
-              name="idade"
-              min="1"
-              placeholder="Digite a sua idade"
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="column-input select">
-            <label>Ocupação:</label>
-            <select name="ocupacao">
-              <option value="não-declarado">Selecione a sua ocupação</option>
-              <option value="estudante">Estudante</option>
-              <option value="trabalhador-clt">Trabalhador CLT</option>
-              <option value="trabalhador-pj">Trabalhador PJ</option>
-              <option value="autonomo">Autônomo</option>
-              <option value="outro">Outros</option>
-            </select>
-          </div>
+          <div className="row">
+            <div className="column-input select">
+              <label>Ocupação:</label>
+              <select name="ocupacao">
+                <option value="não-declarado">Selecione a sua ocupação</option>
+                <option value="estudante">Estudante</option>
+                <option value="trabalhador-clt">Trabalhador CLT</option>
+                <option value="trabalhador-pj">Trabalhador PJ</option>
+                <option value="autonomo">Autônomo</option>
+                <option value="outro">Outros</option>
+              </select>
+            </div>
 
-          <div className="column-input">
-            <label htmlFor="area-preferencia">Área de Preferência: </label>
-            <div className="row" style={{ gap: "25px" }}>
-              <div className="row-selectors">
-                <input
-                  type="radio"
-                  name="area-preferencia"
-                  id="front"
-                  value="Front-end"
-                  checked
-                />
-                <label htmlFor="front">Front-end</label>
-              </div>
-              <div className="row-selectors">
-                <input
-                  type="radio"
-                  name="area-preferencia"
-                  id="back"
-                  value="Back-end"
-                />
-                <label htmlFor="back">Back-end</label>
-              </div>
-              <div className="row-selectors">
-                <input
-                  type="radio"
-                  name="area-preferencia"
-                  id="full"
-                  value="Full stack"
-                />
-                <label htmlFor="full">Full stack</label>
+            <div className="column-input">
+              <label htmlFor="area-preferencia">Área de Preferência: </label>
+              <div className="row" style={{ gap: "25px" }}>
+                <div className="row-selectors">
+                  <input
+                    type="radio"
+                    name="area-preferencia"
+                    id="front"
+                    value="Front-end"
+                    checked
+                  />
+                  <label htmlFor="front">Front-end</label>
+                </div>
+                <div className="row-selectors">
+                  <input
+                    type="radio"
+                    name="area-preferencia"
+                    id="back"
+                    value="Back-end"
+                  />
+                  <label htmlFor="back">Back-end</label>
+                </div>
+                <div className="row-selectors">
+                  <input
+                    type="radio"
+                    name="area-preferencia"
+                    id="full"
+                    value="Full stack"
+                  />
+                  <label htmlFor="full">Full stack</label>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="column-input">
-          <label>Anexar currículo:</label>
-          <input type="file" name="curriculo" multiple />
-        </div>
-        <div className="column-input" style={{ marginBottom: "50px" }}>
-          <label htmlFor="descricao-perfil">
-            Descrição do perfil do candidato:
-          </label>
-          <textarea
-            name="descricao-perfil"
-            placeholder="Nos fale um pouco sobre seu perfil pessoal e profissional"
-          ></textarea>
-        </div>
-        <div className="column-input" style={{ marginBottom: "115px" }}>
-          <div className="row-selectors">
-            <input type="checkbox" name="receber-email" id="receber-email" />
-            <label htmlFor="receber-email">
-              Desejo receber notificações sobre vagas por e-mail.
-            </label>
+          <div className="column-input">
+            <label>Anexar currículo:</label>
+            <input type="file" name="curriculo" multiple />
           </div>
-        </div>
-        <div className="row" style={{ justifyContent: "space-between" }}>
-          <button onClick={cancelar}>Cancelar</button>
-          <input type="submit" value="Enviar" />
-        </div>
-      </form>
-    </div>
+          <div className="column-input" style={{ marginBottom: "50px" }}>
+            <label htmlFor="descricao-perfil">
+              Descrição do perfil do candidato:
+            </label>
+            <textarea
+              name="descricao-perfil"
+              placeholder="Nos fale um pouco sobre seu perfil pessoal e profissional"
+            ></textarea>
+          </div>
+          <div className="column-input" style={{ marginBottom: "115px" }}>
+            <div className="row-selectors">
+              <input type="checkbox" name="receber-email" id="receber-email" />
+              <label htmlFor="receber-email">
+                Desejo receber notificações sobre vagas por e-mail.
+              </label>
+            </div>
+          </div>
+          <div className="row" style={{ justifyContent: "space-between" }}>
+            <button onClick={cancelar}>Cancelar</button>
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 export default FormBasico;
