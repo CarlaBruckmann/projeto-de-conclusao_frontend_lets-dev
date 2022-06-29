@@ -1,13 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FormBasico, FormCompleto, Home, ConsumindoApis } from "./telas";
 
 function App() {
   return (
-    <>
-      <FormCompleto />
-      {/* <FormBasico /> */}
-      {/* <Home />
-      <ConsumindoApis /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form-basico" element={<FormBasico />} />
+        <Route path="/form-completo" element={<FormCompleto />} />
+        <Route path="/consumindo-apis" element={<ConsumindoApis />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

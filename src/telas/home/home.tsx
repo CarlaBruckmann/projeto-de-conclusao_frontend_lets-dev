@@ -77,7 +77,7 @@ const Home = () => {
         <s.Row>
           <img src={Logo} />
           <s.Column>
-            <h3>Aqui vai o nome do(a) Dev</h3>
+            <h3>Carla Bruckmann</h3>
             <p>
               Este espaço é destinado à sua descrição de perfil. Conta aqui quem
               você é, gostos, hobbies e o que achar interessante. Descreve
@@ -94,16 +94,17 @@ const Home = () => {
                 type="button"
                 value="LinkedIn"
                 onClick={() => {
-                  //Aqui vai o seu perfil do linkedIn
-                  window.open("https://www.linkedin.com", "_blank");
+                  window.open(
+                    "https://www.linkedin.com/in/carlabruckmann/",
+                    "_blank"
+                  );
                 }}
               />
               <InputButton
                 type="submit"
                 value="Ver perfil"
                 onClick={() => {
-                  //Aqui vai o seu perfil do GitHub
-                  window.open("https://github.com", "_blank");
+                  window.open("https://github.com/CarlaBruckmann", "_blank");
                 }}
               />
             </s.ButtonGroup>
