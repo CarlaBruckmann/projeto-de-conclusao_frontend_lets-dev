@@ -3,6 +3,7 @@ import * as s from "./styled-input-button";
 
 interface InputButtonProps {
   type?: "file" | "submit" | "button";
+  title?: string;
   name?: string;
   value?: any;
   onChange?: (event: any) => void;
@@ -11,6 +12,7 @@ interface InputButtonProps {
 }
 const InputButton = ({
   type,
+  title,
   name,
   value,
   onChange,
@@ -21,6 +23,7 @@ const InputButton = ({
     <s.InputButton
       className={outlined ? "outlined" : ""}
       type={type}
+      title={title}
       name={name}
       value={value}
       onChange={onChange}

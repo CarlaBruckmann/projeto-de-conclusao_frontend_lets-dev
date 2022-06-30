@@ -99,6 +99,7 @@ const Home = () => {
               <InputButton
                 outlined
                 type="button"
+                title="Acessar o Linkedin"
                 value="LinkedIn"
                 onClick={() => {
                   window.open(
@@ -109,6 +110,7 @@ const Home = () => {
               />
               <InputButton
                 type="submit"
+                title="Acessar o GitHub"
                 value="Ver perfil"
                 onClick={() => {
                   window.open("https://github.com/CarlaBruckmann", "_blank");
