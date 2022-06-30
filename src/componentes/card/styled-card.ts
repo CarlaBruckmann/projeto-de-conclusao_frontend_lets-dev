@@ -7,8 +7,8 @@ export const Container = styled.a`
 
   a {
     font-weight: 600;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     color: var(--color-roxo);
     margin: 20px 0;
 
@@ -19,8 +19,8 @@ export const Container = styled.a`
 
   p {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
     color: var(--color-preto);
   }
 `;

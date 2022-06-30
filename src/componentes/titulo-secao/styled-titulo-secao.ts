@@ -5,8 +5,8 @@ export const Container = styled.div`
 
   h2 {
     font-weight: 600;
-    font-size: 32px;
-    line-height: 26px;
+    font-size: 2rem;
+    line-height: 1.625rem;
     color: var(--color-roxo);
   }
 
