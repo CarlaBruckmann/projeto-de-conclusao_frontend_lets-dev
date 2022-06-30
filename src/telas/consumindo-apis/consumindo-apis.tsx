@@ -1,7 +1,26 @@
 import * as s from "./styled-consumindo-apis";
 import { ColumnInput, Footer, Header, InputButton } from "../../componentes";
+import axios from "axios";
+import { useState } from "react";
+
+interface Localidade {
+  localidade?: string;
+  uf?: string;
+}
 
 const ConsumindoApis = () => {
+  const [CEP, setCEP] = useState("");
+  const [localidade, setLocalidade] = useState<Localidade>({});
+
+  function buscaLocalidade(cep: string) {
+    const baseURL = "https://viacep.com.br/ws";
+
+    axios
+      .get(`${baseURL}/${cep}/json`)
+      .then((resposta) => setLocalidade(resposta.data))
+      .catch((erro) => console.log("ERRO", erro));
+  }
+
   return (
     <s.Container>
       <Header />
@@ -50,15 +69,21 @@ const ConsumindoApis = () => {
             <input
               type="text"
               placeholder="Digite o um CEP (somente números)"
-              value=""
-              onChange={() => {}}
+              value={CEP}
+              onChange={(evento) => setCEP(evento.target.value)}
+              maxLength={8}
             />
           </ColumnInput>
-          <InputButton type="submit" value="Buscar" onClick={() => {}} />
+          <InputButton
+            type="submit"
+            value="Buscar"
+            onClick={() => buscaLocalidade(CEP)}
+          />
         </s.Row>
 
         <span>
-          <strong>Cidade pesquisada: </strong> fwa fwa
+          <strong>Cidade pesquisada: </strong>
+          {localidade.localidade} -{localidade.uf}
         </span>
       </s.Content>
       <Footer />
