@@ -5,7 +5,7 @@ export const Container = styled.a`
   flex-direction: column;
   width: 260px;
 
-  a {
+  h3 {
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.625rem;

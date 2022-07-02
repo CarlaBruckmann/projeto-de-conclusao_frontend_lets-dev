@@ -12,7 +12,7 @@ const Card = ({ titulo, link, descricao }: CardProps) => {
   return (
     <s.Container href={link}>
       <img src={Logo} alt="Imagem Let's Dev" />
-      <a href={link}>{titulo}</a>
+      <h3>{titulo}</h3>
       {typeof descricao === "string" ? <p>{descricao}</p> : descricao}
     </s.Container>
   );
