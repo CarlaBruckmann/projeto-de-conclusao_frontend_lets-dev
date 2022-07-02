@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MyContext } from "./contexto";
-import { FormBasico, FormCompleto, Home, ConsumindoApis } from "./telas";
+import {
+  FormBasico,
+  FormCompleto,
+  Home,
+  ConsumindoApis,
+  SobrePaipers,
+} from "./telas";
 
 function App() {
   const [nomeUsuario, setNomeUsuario] = useState<string>();
@@ -27,6 +33,7 @@ function App() {
           <Route path="/form-basico" element={<FormBasico />} />
           <Route path="/form-completo" element={<FormCompleto />} />
           <Route path="/consumindo-apis" element={<ConsumindoApis />} />
+          <Route path="/sobre-paipers" element={<SobrePaipers />} />
         </Routes>
       </BrowserRouter>
     </MyContext.Provider>
