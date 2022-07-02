@@ -99,7 +99,7 @@ const FormBasico: React.FC = () => {
                     name="area-preferencia"
                     id="front"
                     value="Front-end"
-                    checked
+                    defaultChecked
                   />
                   <label htmlFor="front">Front-end</label>
                 </div>
