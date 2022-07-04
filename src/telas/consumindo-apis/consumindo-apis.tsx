@@ -1,7 +1,9 @@
 import * as s from "./styled-consumindo-apis";
 import { ColumnInput, Footer, Header, InputButton } from "../../componentes";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { MyContext } from "../../contexto";
+import { ImgSearch } from "../../imagens/index";
 
 interface Localidade {
   localidade?: string;
@@ -9,6 +11,7 @@ interface Localidade {
 }
 
 const ConsumindoApis = () => {
+  const { nomeUsuario, setNomeUsuario } = useContext(MyContext);
   const [CEP, setCEP] = useState("");
   const [localidade, setLocalidade] = useState<Localidade>({});
 
@@ -27,7 +30,7 @@ const ConsumindoApis = () => {
       <s.Content>
         <h1>Consumindo API's</h1>
         <h2>Que tal sair da teoria e meter a mão no código?</h2>
-        <p id="desc">
+        <p className="desc">
           Agora é sua vez de consumir uma API e mostrar os dados em tela.
         </p>
 
@@ -62,29 +65,33 @@ const ConsumindoApis = () => {
         </ul>
 
         <hr />
-
-        <s.Row>
-          <ColumnInput style={{ width: "40%", margin: 0 }}>
-            <label>CEP:</label>
-            <input
-              type="text"
-              placeholder="Digite o um CEP (somente números)"
-              value={CEP}
-              onChange={(evento) => setCEP(evento.target.value)}
-              maxLength={8}
+        <s.Content>
+          <img src={ImgSearch} alt="Ilustração de busca" />
+          <h2>Olá{nomeUsuario ? ", " + nomeUsuario : ""}!</h2>
+          <p className="desc">Por favor, digite o CEP abaixo:</p>
+          <s.Row>
+            <ColumnInput style={{ width: "40%", margin: 0 }}>
+              <label>CEP:</label>
+              <input
+                type="text"
+                placeholder="Digite o um CEP (somente números)"
+                value={CEP}
+                onChange={(evento) => setCEP(evento.target.value)}
+                maxLength={8}
+              />
+            </ColumnInput>
+            <InputButton
+              type="submit"
+              value="Buscar"
+              onClick={() => buscaLocalidade(CEP)}
             />
-          </ColumnInput>
-          <InputButton
-            type="submit"
-            value="Buscar"
-            onClick={() => buscaLocalidade(CEP)}
-          />
-        </s.Row>
+          </s.Row>
 
-        <span>
-          <strong>Cidade pesquisada: </strong>
-          {localidade.localidade} -{localidade.uf}
-        </span>
+          <span>
+            <strong>Cidade pesquisada: </strong>
+            {localidade.localidade} -{localidade.uf}
+          </span>
+        </s.Content>
       </s.Content>
       <Footer />
     </s.Container>

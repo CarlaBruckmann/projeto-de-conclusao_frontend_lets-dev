@@ -13,7 +13,7 @@ export const Content = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 90px 40px 90px 40px;
+  padding: 90px 40px 20px 40px;
 
   h1 {
     font-style: italic;
@@ -33,7 +33,7 @@ export const Content = styled.div`
     color: var(--color-preto);
   }
 
-  p#desc {
+  p.desc {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.625rem;
@@ -80,6 +80,10 @@ export const Content = styled.div`
       }
     }
   }
+  img {
+    width: 40%;
+    margin-bottom: 60px;
+  }
 
   span {
     font-weight: 400;
@@ -118,7 +122,7 @@ export const Row = styled.div`
   align-items: flex-end;
   width: 100%;
   gap: 30px;
-  margin: 150px 0 40px 0;
+  margin: 40px 0 40px 0;
 `;
 
 export const Column = styled.div`
