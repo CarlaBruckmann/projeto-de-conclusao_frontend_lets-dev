@@ -28,6 +28,7 @@ export const Banner = styled.div`
     font-style: italic;
     font-weight: 700;
     font-size: 3rem;
+    margin-bottom: 30px;
     line-height: 3.6875rem;
     text-align: center;
     color: #ffffff;

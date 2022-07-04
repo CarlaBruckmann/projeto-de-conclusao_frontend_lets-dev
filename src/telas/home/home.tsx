@@ -52,10 +52,23 @@ const Home = () => {
     <s.Container>
       <Header />
       <s.Banner>
-        <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
-        <button onClick={() => localStorage.removeItem("nomeUsuario")}>
-          Remover Nome do Usuário
-        </button>
+        <h1>
+          Que prazer te ver aqui
+          {nomeUsuario ? ", " + nomeUsuario : ""}!
+        </h1>
+        <div>
+          {nomeUsuario ? (
+            <InputButton
+              outlined
+              type="button"
+              title="Remover nome de usuário"
+              value="Remover nome de Usuário"
+              onClick={() => localStorage.removeItem("nomeUsuario")}
+            />
+          ) : (
+            ""
+          )}
+        </div>
         <img src={Logo} />
         <h2>
           Seja bem-vindo(a) ao Lets Dev! O evento que vai transformar sua
