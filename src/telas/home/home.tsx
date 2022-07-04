@@ -58,13 +58,15 @@ const Home = () => {
         </h1>
         <div>
           {nomeUsuario ? (
-            <InputButton
-              outlined
-              type="button"
-              title="Remover nome de usuário"
-              value="Remover nome de Usuário"
-              onClick={() => localStorage.removeItem("nomeUsuario")}
-            />
+            <div style={{ marginTop: "25px" }}>
+              <InputButton
+                outlined
+                type="button"
+                title="Remover nome de usuário"
+                value="Remover nome de Usuário"
+                onClick={() => localStorage.removeItem("nomeUsuario")}
+              />
+            </div>
           ) : (
             ""
           )}
