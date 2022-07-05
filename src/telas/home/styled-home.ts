@@ -63,6 +63,9 @@ export const GroupCards = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 100px;
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
 `;
 
 export const Row = styled.div`
@@ -74,10 +77,21 @@ export const Row = styled.div`
     width: 50%;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     flex-wrap: wrap;
     img {
       width: 100%;
+    }
+    input {
+      margin: 30px 0;
+    }
+    h3 {
+      margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 767px) {
+    input {
+      margin: 25px 0 0 0;
     }
   }
 `;

@@ -56,7 +56,7 @@ const Home = () => {
           Que prazer te ver aqui
           {nomeUsuario ? ", " + nomeUsuario : ""}!
         </h1>
-        <div>
+        <s.Container>
           {nomeUsuario ? (
             <div style={{ marginTop: "25px" }}>
               <InputButton
@@ -70,7 +70,7 @@ const Home = () => {
           ) : (
             ""
           )}
-        </div>
+        </s.Container>
         <img src={Logo} />
         <h2>
           Seja bem-vindo(a) ao Lets Dev! O evento que vai transformar sua

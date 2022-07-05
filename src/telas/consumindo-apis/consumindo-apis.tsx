@@ -57,7 +57,7 @@ const ConsumindoApis = () => {
             - Rio Grande do Sul);
           </li>
           <li>
-            Na dúvida, sempre acesse a documentação:{" "}
+            Na dúvida, sempre acesse a documentação:
             <a href="https://viacep.com.br/" target="_blank">
               https://viacep.com.br/
             </a>
