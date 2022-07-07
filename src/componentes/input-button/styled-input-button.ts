@@ -10,7 +10,7 @@ export const InputButton = styled.input<InputButtonProps>`
   &.outlined {
     width: 225px;
     padding: 10px;
-    height: 35px;
+    height: 40px;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
@@ -18,7 +18,6 @@ export const InputButton = styled.input<InputButtonProps>`
   &[type="submit"] {
     background-color: var(--color-roxo);
     color: white;
-    border: none !important;
 
     :hover {
       box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
