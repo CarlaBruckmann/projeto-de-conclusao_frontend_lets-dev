@@ -63,6 +63,7 @@ const FormBasico: React.FC = () => {
               <input
                 type="text"
                 name="nome"
+                title="Digite aqui seu nome completo"
                 placeholder="Digite seu nome aqui"
                 required
               />
@@ -72,6 +73,7 @@ const FormBasico: React.FC = () => {
               <input
                 type="number"
                 name="idade"
+                title="Digite aqui sua idade"
                 min="1"
                 placeholder="Digite a sua idade"
               />
@@ -80,13 +82,25 @@ const FormBasico: React.FC = () => {
           <div className="row">
             <div className="column-input select">
               <label>Ocupação:</label>
-              <select name="ocupacao">
-                <option value="não-declarado">Selecione a sua ocupação</option>
-                <option value="estudante">Estudante</option>
-                <option value="trabalhador-clt">Trabalhador CLT</option>
-                <option value="trabalhador-pj">Trabalhador PJ</option>
-                <option value="autonomo">Autônomo</option>
-                <option value="outro">Outros</option>
+              <select name="ocupacao" title="Selecione aqui sua ocupação atual">
+                <option value="não-declarado" title="não declarado">
+                  Selecione a sua ocupação
+                </option>
+                <option value="estudante" title="estudante">
+                  Estudante
+                </option>
+                <option value="trabalhador-clt" title="trabalhador CLT">
+                  Trabalhador CLT
+                </option>
+                <option value="trabalhador-pj" title="trabalhador PJ">
+                  Trabalhador PJ
+                </option>
+                <option value="autonomo" title="autonomo">
+                  Autônomo
+                </option>
+                <option value="outro" title="outros">
+                  Outros
+                </option>
               </select>
             </div>
 
@@ -99,6 +113,7 @@ const FormBasico: React.FC = () => {
                     name="area-preferencia"
                     id="front"
                     value="Front-end"
+                    title="Selecione a sua área de preferência - FrontEnd"
                     defaultChecked
                   />
                   <label htmlFor="front">Front-end</label>
@@ -109,6 +124,7 @@ const FormBasico: React.FC = () => {
                     name="area-preferencia"
                     id="back"
                     value="Back-end"
+                    title="Selecione a sua área de preferência - BackEnd"
                   />
                   <label htmlFor="back">Back-end</label>
                 </div>
@@ -118,6 +134,7 @@ const FormBasico: React.FC = () => {
                     name="area-preferencia"
                     id="full"
                     value="Full stack"
+                    title="Selecione a sua área de preferência - Full Stack"
                   />
                   <label htmlFor="full">Full stack</label>
                 </div>
@@ -126,7 +143,12 @@ const FormBasico: React.FC = () => {
           </div>
           <div className="column-input">
             <label>Anexar currículo:</label>
-            <input type="file" name="curriculo" multiple />
+            <input
+              type="file"
+              name="curriculo"
+              title="Clique para escolher arquivo de currículo"
+              multiple
+            />
           </div>
           <div className="column-input" style={{ marginBottom: "50px" }}>
             <label htmlFor="descricao-perfil">
@@ -135,19 +157,31 @@ const FormBasico: React.FC = () => {
             <textarea
               name="descricao-perfil"
               placeholder="Nos fale um pouco sobre seu perfil pessoal e profissional"
+              title="Descreva seu perfil pessoal e profissional"
             ></textarea>
           </div>
           <div className="column-input" style={{ marginBottom: "115px" }}>
             <div className="row-selectors">
-              <input type="checkbox" name="receber-email" id="receber-email" />
+              <input
+                type="checkbox"
+                name="receber-email"
+                id="receber-email"
+                title="Desejo receber notificações sobre vagas por e-mail."
+              />
               <label htmlFor="receber-email">
                 Desejo receber notificações sobre vagas por e-mail.
               </label>
             </div>
           </div>
           <div className="row" style={{ justifyContent: "space-between" }}>
-            <button onClick={cancelar}>Cancelar</button>
-            <input type="submit" value="Enviar" />
+            <button onClick={cancelar} title="Cancelar envio de formulário">
+              Cancelar
+            </button>
+            <input
+              type="submit"
+              value="Enviar"
+              title="Confirmar envio de formulário"
+            />
           </div>
         </form>
       </div>

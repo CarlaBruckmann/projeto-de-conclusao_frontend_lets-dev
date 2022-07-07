@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
         <a
           href="https://github.com/CarlaBruckmann/formulario_versao2_LetsDev-Paipe"
           target="_blank"
+          title="GitHub de Carla Bruckmann"
         >
           Repositório GitHub
         </a>

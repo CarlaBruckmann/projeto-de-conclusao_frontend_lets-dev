@@ -17,6 +17,7 @@ const Home = () => {
     {
       titulo: "Formulário em HTML e CSS",
       link: "/form-basico",
+      title: "Clique para ir ao formulário básico",
       descricao: (
         <p>
           O primeiro <i>“Hello World”</i> a gente nunca esquece. O primeiro
@@ -27,6 +28,7 @@ const Home = () => {
     {
       titulo: "Formulário 2.0",
       link: "/form-completo",
+      title: "Clique para ir ao formulário 2.0",
       descricao: (
         <p>
           O primeiro <i>“console.log”</i> a gente também não esquece. O
@@ -37,12 +39,15 @@ const Home = () => {
     {
       titulo: "Consumindo API's",
       link: "/consumindo-apis",
+      title: "Clique para ir a página de consumo de API",
       descricao:
         "Brincando com a API viaCEP, informando um CEP, salvando os valores digitados no estado e mostrando os dados na tela.",
     },
     {
       titulo: "A PAIPE e os Paipers",
       link: "/sobre-paipers",
+      title:
+        "Clique para ir a página descritiva da Paipe e professores do Lets Dev",
       descricao:
         "Uma página bônus de presente para deixar o seu projeto ainda mais completo. E de quebra ficar por dentro do que acontece na Paipe.",
     },
@@ -90,6 +95,7 @@ const Home = () => {
               key={card.titulo}
               titulo={card.titulo}
               link={card.link}
+              title={card.title}
               descricao={card.descricao}
             />
           ))}
@@ -98,7 +104,7 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={Logo} />
+          <img src={Logo} alt="Foto de Carla Bruckmann" />
           <s.Column>
             <h3>Carla Bruckmann</h3>
             <p>
@@ -115,7 +121,7 @@ const Home = () => {
               <InputButton
                 outlined
                 type="button"
-                title="Acessar o Linkedin"
+                title="Acessar o Linkedin de Carla Bruckmann"
                 value="LinkedIn"
                 onClick={() => {
                   window.open(
@@ -126,7 +132,7 @@ const Home = () => {
               />
               <InputButton
                 type="submit"
-                title="Acessar o GitHub"
+                title="Acessar o GitHub do Projeto"
                 value="Ver perfil"
                 onClick={() => {
                   window.open("https://github.com/CarlaBruckmann", "_blank");

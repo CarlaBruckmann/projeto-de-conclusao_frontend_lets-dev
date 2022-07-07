@@ -5,14 +5,15 @@ import * as s from "./styled-card";
 interface CardProps {
   titulo: string;
   link: string;
+  title: string;
   descricao: string | ReactNode;
 }
 
-const Card = ({ titulo, link, descricao }: CardProps) => {
+const Card = ({ titulo, link, descricao, title }: CardProps) => {
   return (
     <s.Container href={link}>
       <img src={Logo} alt="Imagem Let's Dev" />
-      <h3>{titulo}</h3>
+      <h3 title={title}>{titulo}</h3>
       {typeof descricao === "string" ? <p>{descricao}</p> : descricao}
     </s.Container>
   );

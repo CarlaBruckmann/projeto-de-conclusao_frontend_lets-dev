@@ -64,6 +64,7 @@ const FormCompleto: React.FC = () => {
               <input
                 type="text"
                 name="nome"
+                title="Digite aqui seu nome completo"
                 placeholder="Digite seu nome aqui"
                 required
                 value={nome}
@@ -75,6 +76,7 @@ const FormCompleto: React.FC = () => {
               <input
                 type="number"
                 name="idade"
+                title="Digite aqui sua idade"
                 min="1"
                 placeholder="Digite a sua idade"
                 value={idade}
@@ -88,14 +90,27 @@ const FormCompleto: React.FC = () => {
               <select
                 name="ocupacao"
                 value={ocupacao}
+                title="Selecione aqui sua ocupação atual"
                 onChange={(e) => setOcupacao(e.target.value)}
               >
-                <option value="não-declarado">Selecione a sua ocupação</option>
-                <option value="estudante">Estudante</option>
-                <option value="trabalhador-clt">Trabalhador CLT</option>
-                <option value="trabalhador-pj">Trabalhador PJ</option>
-                <option value="autonomo">Autônomo</option>
-                <option value="outro">Outros</option>
+                <option value="não-declarado" title="não declarado">
+                  Selecione a sua ocupação
+                </option>
+                <option value="estudante" title="estudante">
+                  Estudante
+                </option>
+                <option value="trabalhador-clt" title="trabalhador CLT">
+                  Trabalhador CLT
+                </option>
+                <option value="trabalhador-pj" title="trabalhador PJ">
+                  Trabalhador PJ
+                </option>
+                <option value="autonomo" title="autonomo">
+                  Autônomo
+                </option>
+                <option value="outro" title="outros">
+                  Outros
+                </option>
               </select>
             </ColumnInput>
 
@@ -108,6 +123,7 @@ const FormCompleto: React.FC = () => {
                     name="area-preferencia"
                     id="front"
                     value="Front-end"
+                    title="Selecione a sua área de preferência - FrontEnd"
                     checked={areaPreferencia === "Front-end"}
                     onChange={(e) => setAreaPreferencia(e.target.value)}
                   />
@@ -119,6 +135,7 @@ const FormCompleto: React.FC = () => {
                     name="area-preferencia"
                     id="back"
                     value="Back-end"
+                    title="Selecione a sua área de preferência - BackEnd"
                     checked={areaPreferencia === "Back-end"}
                     onChange={(e) => setAreaPreferencia(e.target.value)}
                   />
@@ -130,6 +147,7 @@ const FormCompleto: React.FC = () => {
                     name="area-preferencia"
                     id="full"
                     value="Full stack"
+                    title="Selecione a sua área de preferência - Full Stack"
                     checked={areaPreferencia === "Full stack"}
                     onChange={(e) => setAreaPreferencia(e.target.value)}
                   />
@@ -143,6 +161,7 @@ const FormCompleto: React.FC = () => {
             <InputButton
               type="file"
               name="curriculo"
+              title="Clique para escolher arquivo de currículo"
               onChange={(e) => setCurriculo(e.target?.files[0])}
             />
           </ColumnInput>
@@ -153,6 +172,7 @@ const FormCompleto: React.FC = () => {
             <textarea
               name="descricao-perfil"
               placeholder="Nos fale um pouco sobre seu perfil pessoal e profissional"
+              title="Descreva seu perfil pessoal e profissional"
               value={descricaoPerfil}
               onChange={(e) => setDescricaoPerfil(e.target.value)}
             ></textarea>
@@ -163,6 +183,7 @@ const FormCompleto: React.FC = () => {
                 type="checkbox"
                 name="receber-email"
                 id="receber-email"
+                title="Desejo receber notificações sobre vagas por e-mail."
                 checked={receberEmail}
                 onChange={() => setReceberEmail(!receberEmail)}
               />
@@ -176,9 +197,14 @@ const FormCompleto: React.FC = () => {
               type="button"
               onClick={cancelar}
               value="Cancelar"
+              title="Cancelar envio de formulário"
               outlined
             />
-            <InputButton type="submit" value="Enviar" />
+            <InputButton
+              type="submit"
+              value="Enviar"
+              title="Confirmar envio de formulário"
+            />
           </Row>
         </s.Formulario>
       </s.Container>

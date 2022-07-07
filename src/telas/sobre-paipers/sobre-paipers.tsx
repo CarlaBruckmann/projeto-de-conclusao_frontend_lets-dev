@@ -25,6 +25,7 @@ interface FotoDescricaoProps {
 interface LinkProps {
   icone: ReactNode;
   link: string;
+  title: string;
   descricao?: string;
 }
 
@@ -44,8 +45,8 @@ const SobrePaipers = () => {
     </s.Row>
   );
 
-  const Link = ({ icone, link, descricao }: LinkProps) => (
-    <s.Link href={link} target="_blank">
+  const Link = ({ icone, link, descricao, title }: LinkProps) => (
+    <s.Link href={link} target="_blank" title={title}>
       {icone} {descricao}
     </s.Link>
   );
@@ -84,18 +85,22 @@ const SobrePaipers = () => {
             <Link
               icone={<LogoInstagramIcon />}
               link="https://www.instagram.com/paipe.co/"
+              title="Instagram"
             />
             <Link
               icone={<LogoFacebookIcon />}
               link="https://www.facebook.com/paipe.co/"
+              title="Facebook"
             />
             <Link
               icone={<LogoLinkedInIcon />}
               link="https://www.linkedin.com/company/paipeco"
+              title="Linkedin"
             />
             <Link
               icone={<LogoYouTubeIcon />}
               link="https://www.youtube.com/channel/UCpJ81INdQksLLoQp_FQaf0w"
+              title="Youtube"
             />
           </s.GroupIcons>
         </s.ColumnIcons>
@@ -120,11 +125,13 @@ const SobrePaipers = () => {
             <Link
               icone={<LogoLinkedInIcon />}
               link="https://www.linkedin.com/in/marcos-padilha-6b48901b9"
+              title="Linkedin de Marcos Padilha"
               descricao="Marcos Padilha"
             />
             <Link
               icone={<LogoLinkedInIcon />}
               link="https://www.linkedin.com/in/u%C3%A9slei-suptitz"
+              title="Linkedin de Uéslei Suptitz"
               descricao="Uéslei Suptitz"
             />
           </s.GroupIcons>
