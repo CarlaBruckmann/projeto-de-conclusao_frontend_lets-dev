@@ -10,6 +10,9 @@ export const ColumnInput = styled.div`
   }
   &.select {
     width: 30%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
   input[type="text"],
   input[type="number"],

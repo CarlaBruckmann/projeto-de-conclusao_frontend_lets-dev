@@ -9,6 +9,9 @@ export const Container = styled.div`
   align-items: center;
   max-width: 1200px;
   padding: 90px;
+  @media (max-width: 767px) {
+    padding: 90px 20px;
+  }
 `;
 export const H2 = styled.h2`
   text-align: center;
