@@ -20,7 +20,6 @@ const FormCompleto: React.FC = () => {
   const [curriculo, setCurriculo] = useState<any>("");
   const [descricaoPerfil, setDescricaoPerfil] = useState("");
   const [receberEmail, setReceberEmail] = useState(false);
-  // console.log("Area :>>", areaPreferencia);
 
   function enviarFormulario(event: FormEvent) {
     event.preventDefault();
@@ -34,7 +33,6 @@ const FormCompleto: React.FC = () => {
   }
 
   const cancelar = (event: FormEvent) => {
-    // Evita o redirecionamento padrão para outra tela e manda um alert
     event.preventDefault();
     window.location.href = "/";
   };

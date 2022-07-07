@@ -6,7 +6,7 @@ export const Footer = styled.footer`
   flex-wrap: wrap;
   gap: 30px;
   width: 100%;
-  background-color: #231f20;
+  background-color: var(--color-preto);
   padding: 50px;
 `;
 export const Row = styled.div`

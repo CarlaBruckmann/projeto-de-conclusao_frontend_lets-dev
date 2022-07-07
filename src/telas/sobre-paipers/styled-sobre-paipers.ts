@@ -52,14 +52,14 @@ export const Column = styled.div`
     font-weight: 600;
     font-size: 1.875rem;
     line-height: 1.625rem;
-    color: #201e1f;
+    color: var(--color-preto);
   }
 
   p {
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.875rem;
-    color: #201e1f;
+    color: var(--color-preto);
 
     strong {
       font-weight: 500;
@@ -101,7 +101,7 @@ export const Link = styled.a`
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.875rem;
-  color: #201e1f;
+  color: var(--color-preto);
 
   :hover {
     text-decoration: underline;
@@ -110,7 +110,7 @@ export const Link = styled.a`
       transform: scale(1.5);
 
       path {
-        fill: #7d2eba;
+        fill: var(--color-roxo);
       }
     }
   }
