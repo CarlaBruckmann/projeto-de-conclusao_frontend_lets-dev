@@ -81,7 +81,7 @@ export const Content = styled.div`
     }
   }
   img {
-    width: 40%;
+    width: 90%;
     margin-bottom: 60px;
   }
 
@@ -90,8 +90,6 @@ export const Content = styled.div`
     font-size: 1rem;
     line-height: 1.625rem;
     color: #000000;
-    width: 100%;
-    margin-bottom: 150px;
 
     strong {
       font-weight: 500;
@@ -119,14 +117,56 @@ export const Objetivo = styled.p`
 
 export const Row = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   gap: 30px;
   margin: 40px 0 40px 0;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+export const ContainerSearch = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  div {
+    width: 100%;
+  }
+
+  div.resCep {
+    margin: 40px 0 100px 0;
+    height: 1.625rem;
+  }
+
+  input[type="text"] {
+    border: 1px solid var(--color-preto);
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px;
+    border-radius: 5px;
+
+    :focus {
+      outline: 1px solid var(--color-roxo);
+    }
+  }
+  input[type="submit"] {
+    margin-top: 27px;
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
 `;

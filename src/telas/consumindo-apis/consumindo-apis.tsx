@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import { MyContext } from "../../contexto";
 import { ImgSearch } from "../../imagens/index";
+import { Divisor } from "../form-completo/styled-form-completo";
 
 interface Localidade {
   localidade?: string;
@@ -65,33 +66,46 @@ const ConsumindoApis = () => {
         </ul>
 
         <hr />
-        <s.Content>
-          <img src={ImgSearch} alt="Ilustração de busca" />
-          <h2>Olá{nomeUsuario ? ", " + nomeUsuario : ""}!</h2>
-          <p className="desc">Por favor, digite o CEP abaixo:</p>
-          <s.Row>
-            <ColumnInput style={{ width: "40%", margin: 0 }}>
-              <label>CEP:</label>
-              <input
-                type="text"
-                placeholder="Digite o um CEP (somente números)"
-                value={CEP}
-                onChange={(evento) => setCEP(evento.target.value)}
-                maxLength={8}
+        <s.Row>
+          <s.Container>
+            <img src={ImgSearch} alt="Ilustração de busca" />
+          </s.Container>
+          <s.ContainerSearch>
+            <div>
+              <h2>Olá{nomeUsuario ? ", " + nomeUsuario : ""}!</h2>
+              <p className="desc">
+                Por favor, preencha o CEP abaixo para a efetuar busca:
+              </p>
+            </div>
+            <s.Row>
+              <div>
+                <label>CEP:</label>
+                <input
+                  type="text"
+                  placeholder="Digite o CEP (somente números)"
+                  value={CEP}
+                  onChange={(evento) => setCEP(evento.target.value)}
+                  maxLength={8}
+                />
+              </div>
+              <InputButton
+                type="submit"
+                value="Buscar"
+                onClick={() => buscaLocalidade(CEP)}
               />
-            </ColumnInput>
-            <InputButton
-              type="submit"
-              value="Buscar"
-              onClick={() => buscaLocalidade(CEP)}
-            />
-          </s.Row>
-
-          <span>
-            <strong>Cidade pesquisada: </strong>
-            {localidade.localidade} -{localidade.uf}
-          </span>
-        </s.Content>
+            </s.Row>
+            <div className="resCep">
+              {localidade.localidade ? (
+                <span>
+                  <strong>Cidade pesquisada: </strong>
+                  {localidade.localidade} -{localidade.uf}
+                </span>
+              ) : (
+                ""
+              )}
+            </div>
+          </s.ContainerSearch>
+        </s.Row>
       </s.Content>
       <Footer />
     </s.Container>
