@@ -83,6 +83,7 @@ const ConsumindoApis = () => {
                 <input
                   type="text"
                   placeholder="Digite o CEP (somente números)"
+                  title="Digite o número do CEP"
                   value={CEP}
                   onChange={(evento) => setCEP(evento.target.value)}
                   maxLength={8}
@@ -90,6 +91,7 @@ const ConsumindoApis = () => {
               </div>
               <InputButton
                 type="submit"
+                title="Clique para efetuar a busca"
                 value="Buscar"
                 onClick={() => buscaLocalidade(CEP)}
               />
