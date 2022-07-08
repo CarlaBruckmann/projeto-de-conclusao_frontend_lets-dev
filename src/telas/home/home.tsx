@@ -6,7 +6,7 @@ import {
   Card,
   InputButton,
 } from "../../componentes";
-import { Logo } from "../../imagens";
+import { Logo, ImgDescricao } from "../../imagens";
 import { useContext } from "react";
 import { MyContext } from "../../contexto";
 
@@ -104,18 +104,35 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={Logo} alt="Foto de Carla Bruckmann" />
+          <img src={ImgDescricao} alt="Foto de Carla Bruckmann" />
           <s.Column>
             <h3>Carla Bruckmann</h3>
             <p>
-              Este espaço é destinado à sua descrição de perfil. Conta aqui quem
-              você é, gostos, hobbies e o que achar interessante. Descreve
-              também as características profissionais e o que te motivou a
-              ingressar na área do desenvolviemento de software.
+              Sou estudante do <i>Let's Dev</i>, mãe da Alice e dois gatos
+              fofos, fã de séries, futura patinadora e Desenvolvedora FrontEnd.
+              <br />
+              Tenho 29 anos, estudei e trabalhei no setor Administrativo, com
+              experiência em resolução de problemas e gestão de projetos/
+              contratos. Sou uma profissional comunicativa e facilitadora, com
+              capacidade analítica e pensamento conceitual, dedicada a aprender
+              e evoluir.
             </p>
             <p>
-              Você pode substituir a foto a lado pela sua melhor foto e colocar
-              suas redes nos botões abaixo!
+              Em 2021, decidi trilhar meu caminho na área da tecnologia,
+              participando de diversos cursos como
+              <i> Responsive Web Design</i> da FreeCodeCamp e
+              <i> Desenvolvimento Full Stack</i> da Gama Academy, focando em
+              desenvolvimento FrontEnd.
+              <br />
+              Quero ser exemplo para a minha filha, incentivar e mostrar que ela
+              pode ser o que quiser, que veja uma mulher conquistando espaços,
+              fazendo a diferença e participando ativamente da transformação
+              digital.
+            </p>
+            <p>
+              No momento, busco aquela primeira oportunidade para aplicar
+              conhecimentos adquiridos e desenvolver a potência que tenho dentro
+              de mim! &#x1F680;
             </p>
             <s.ButtonGroup>
               <InputButton

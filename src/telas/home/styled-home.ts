@@ -49,11 +49,10 @@ export const Banner = styled.div`
     font-size: 1.5rem;
     text-align: center;
   }
-
   p {
     font-size: 1rem;
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 0;
   }
 `;
 
@@ -70,28 +69,30 @@ export const GroupCards = styled.div`
 
 export const Row = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   gap: 30px;
 
   img {
-    width: 50%;
+    width: auto;
+    height: auto;
   }
 
   @media (max-width: 991px) {
-    flex-wrap: wrap;
-    img {
-      width: 100%;
-    }
     input {
-      margin: 30px 0;
-    }
-    h3 {
-      margin-bottom: 25px;
+      margin: 10px 0;
     }
   }
   @media (max-width: 767px) {
+    flex-wrap: wrap;
     input {
       margin: 25px 0 0 0;
+    }
+    img {
+      width: 50%;
+      height: auto;
+      margin: auto;
     }
   }
 `;
@@ -105,6 +106,7 @@ export const Column = styled.div`
     font-weight: 600;
     font-size: 1.75rem;
     line-height: 1.625rem;
+    margin-bottom: 15px;
     color: var(--color-roxo);
   }
 
@@ -113,9 +115,11 @@ export const Column = styled.div`
     font-size: 1rem;
     line-height: 1.625rem;
     color: var(--color-preto);
+    margin: 10px 0;
   }
 `;
 
 export const ButtonGroup = styled.div`
   width: 100%;
+  margin-top: 15px;
 `;
