@@ -1,5 +1,5 @@
 import * as s from "./styled-consumindo-apis";
-import { ColumnInput, Footer, Header, InputButton } from "../../componentes";
+import { Footer, Header, InputButton } from "../../componentes";
 import axios from "axios";
 import { useState, useContext } from "react";
 import { MyContext } from "../../contexto";
@@ -35,7 +35,7 @@ const ConsumindoApis = () => {
           Agora é sua vez de consumir uma API e mostrar os dados em tela.
         </p>
 
-        <hr />
+        <Divisor />
 
         <s.Objetivo>
           <strong>Objetivo:</strong> Fazer a conexão com a API do Via CEP usando
@@ -65,7 +65,7 @@ const ConsumindoApis = () => {
           </li>
         </ul>
 
-        <hr />
+        <Divisor />
         <s.Row>
           <s.Container>
             <img src={ImgSearch} alt="Ilustração de busca" />

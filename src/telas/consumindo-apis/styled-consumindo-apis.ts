@@ -41,17 +41,6 @@ export const Content = styled.div`
     margin-top: 10px;
   }
 
-  hr {
-    background: var(--color-cinza);
-    height: 1px;
-    width: 100%;
-    margin: 60px 0 30px 0;
-  }
-
-  hr:first-child {
-    margin: 40px 0 35px 0;
-  }
-
   h3 {
     font-weight: 600;
     font-size: 1rem;
