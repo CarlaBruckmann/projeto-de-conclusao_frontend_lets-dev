@@ -76,7 +76,7 @@ const Home = () => {
             ""
           )}
         </s.Container>
-        <img src={Logo} />
+        <img src={Logo} alt="Logo do Programa Lets Dev" />
         <h2>
           Seja bem-vindo(a) ao Lets Dev! O evento que vai transformar sua
           carreira.
@@ -88,7 +88,6 @@ const Home = () => {
       </s.Banner>
       <s.Content>
         <TituloSecao titulo="O que fizemos até agora..." />
-
         <s.GroupCards>
           {telas.map((card) => (
             <Card
@@ -100,9 +99,7 @@ const Home = () => {
             />
           ))}
         </s.GroupCards>
-
         <TituloSecao titulo="Um pouco sobre mim..." />
-
         <s.Row>
           <img src={ImgDescricao} alt="Foto de Carla Bruckmann" />
           <s.Column>

@@ -113,7 +113,6 @@ const FormCompleto: React.FC = () => {
                 </option>
               </select>
             </ColumnInput>
-
             <ColumnInput>
               <Label htmlFor="area-preferencia">Área de Preferência: </Label>
               <Row style={{ gap: "25px" }}>

@@ -24,13 +24,10 @@ const FormBasico: React.FC = () => {
     const receberEmail = tagPorNome("receber-email")?.value;
 
     const mensagem = `${nome}, tem ${idade} anos e atualmente é ${ocupacao}. Se ingressar no mundo do desenvolvimento, tem preferência por atuar como ${areaPreferencia}.
-
           Em sua descrição de perfil consta: "${descricaoPerfil}".
-
           Deseja receber e-mail: ${receberEmail ? "Sim" : "Não"}
           Currículo: ${curriculo ? curriculo.files[0].name : "Não informado"}
           `;
-
     alert(mensagem);
   }
   const cancelar = (event: FormEvent) => {
@@ -103,7 +100,6 @@ const FormBasico: React.FC = () => {
                 </option>
               </select>
             </div>
-
             <div className="column-input">
               <label htmlFor="area-preferencia">Área de Preferência: </label>
               <div className="row" style={{ gap: "25px" }}>

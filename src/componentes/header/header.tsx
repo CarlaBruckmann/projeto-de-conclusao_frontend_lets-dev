@@ -13,7 +13,7 @@ const Header = () => {
         rel="noopener noreferrer"
         title="Clique para ir ao site da Paipe"
       >
-        <img src={LogoPaipe} />
+        <img src={LogoPaipe} alt="Logo da Paipe" />
       </a>
     </s.Header>
   );

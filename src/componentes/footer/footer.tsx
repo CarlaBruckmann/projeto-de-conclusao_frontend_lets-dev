@@ -17,7 +17,6 @@ const Footer: React.FC = () => {
             fill="white"
           />
         </svg>
-
         <a
           href="https://github.com/CarlaBruckmann/formulario_versao2_LetsDev-Paipe"
           target="_blank"

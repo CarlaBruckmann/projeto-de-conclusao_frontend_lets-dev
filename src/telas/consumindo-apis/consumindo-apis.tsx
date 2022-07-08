@@ -34,16 +34,12 @@ const ConsumindoApis = () => {
         <p className="desc">
           Agora é sua vez de consumir uma API e mostrar os dados em tela.
         </p>
-
         <Divisor />
-
         <s.Objetivo>
           <strong>Objetivo:</strong> Fazer a conexão com a API do Via CEP usando
           o Axios.
         </s.Objetivo>
-
         <h3>Instruções:</h3>
-
         <ul>
           <li>Criar a função que faz a requisição;</li>
           <li>Utilizar a seguinte baseURL: “https://viacep.com.br/ws/”;</li>
@@ -64,7 +60,6 @@ const ConsumindoApis = () => {
             </a>
           </li>
         </ul>
-
         <Divisor />
         <s.Row>
           <s.Container>
