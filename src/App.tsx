@@ -11,7 +11,7 @@ import {
 } from "./telas";
 
 function App() {
-  const [nomeUsuario, setNomeUsuario] = useState<string>("");
+  const [nomeUsuario, setNomeUsuario] = useState<string>();
 
   useEffect(() => {
     if (!nomeUsuario) {

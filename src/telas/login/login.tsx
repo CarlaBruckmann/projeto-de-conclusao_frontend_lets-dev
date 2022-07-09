@@ -1,3 +1,4 @@
+import { FormEvent } from "react";
 import * as s from "./styled-login";
 import { ImgLogin } from "../../imagens";
 import { InputButton } from "../../componentes";
@@ -6,13 +7,16 @@ import { MyContext } from "../../contexto";
 
 const Login = () => {
   const { nomeUsuario, setNomeUsuario } = useContext(MyContext);
-  function RecebeNome() {
+
+  const enviaFormulario = (event: FormEvent) => {
+    event.preventDefault();
     let nomeInput = document.getElementById("nomeInput") as HTMLInputElement;
     let nomeInformado = nomeInput.value;
     setNomeUsuario(nomeInformado);
     localStorage.setItem("nomeUsuario", nomeUsuario);
-    window.location.href = "./home";
-  }
+    window.location.href = "/home";
+  };
+
   return (
     <s.Container>
       <s.Row>
@@ -29,31 +33,33 @@ const Login = () => {
           </form>
           <div>
             <h3>Acesse Gratuitamente:</h3>
-          </div>
-          <div>
-            <label>Nome:</label>
-            <input
-              type="text"
-              placeholder="Digite o seu nome"
-              title="Digite o seu nome"
-              id="nomeInput"
-            />
-          </div>
-          <div>
-            <label>E-mail:</label>
-            <input
-              type="email"
-              placeholder="Digite o seu melhor email"
-              title="Digite o seu melhor email"
-            />
-          </div>
-          <div>
-            <InputButton
-              type="submit"
-              title="Clique para efetuar o login"
-              value="Entrar"
-              onClick={RecebeNome}
-            />
+            <form onSubmit={enviaFormulario}>
+              <div>
+                <label>Nome:</label>
+                <input
+                  type="text"
+                  placeholder="Digite o seu nome"
+                  title="Digite o seu nome"
+                  id="nomeInput"
+                  required
+                />
+              </div>
+              <div>
+                <label>E-mail:</label>
+                <input
+                  type="email"
+                  placeholder="Digite o seu melhor email"
+                  title="Digite o seu melhor email"
+                />
+              </div>
+              <div>
+                <InputButton
+                  type="submit"
+                  title="Clique para efetuar o login"
+                  value="Entrar"
+                />
+              </div>
+            </form>
           </div>
         </s.ContainerForm>
       </s.Row>
