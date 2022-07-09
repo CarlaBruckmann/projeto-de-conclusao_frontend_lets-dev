@@ -7,6 +7,8 @@ import {
   SimboloLetsDev,
   FotoMarcos,
   FotoUesleiSuptitz,
+  FotoInaiaraSeibel,
+  FotoLucasServo,
 } from "../../imagens";
 import {
   LogoFacebookIcon,
@@ -117,6 +119,17 @@ const SobrePaipers = () => {
             image={FotoUesleiSuptitz}
             rightImage
           />
+          <FotoDescricao
+            titulo="Inaiara Seibel"
+            descricao="Professora dos Módulos Oracle Apex e Banco de Dados no Let’s Dev. Formada Engenheira de Software na Universidade Católica de Brasília. Na Paipe desde 2021, atua como Analista de Negócios, além de ser professora de tecnologia."
+            image={FotoInaiaraSeibel}
+          />
+          <FotoDescricao
+            titulo="Lucas Servo"
+            descricao="Professor do Módulo Back-end no Let's Dev. Formado em Instituições de Tecnologia como Rocketseat, Ituring e 42sp.  Na Paipe desde 2022, atua como Engenheiro de Software, Instrutor e Líder no Núcleo de Arquitetura."
+            image={FotoLucasServo}
+            rightImage
+          />
         </s.Group>
 
         <s.ColumnIcons>
@@ -133,6 +146,18 @@ const SobrePaipers = () => {
               link="https://www.linkedin.com/in/u%C3%A9slei-suptitz"
               title="Linkedin de Uéslei Suptitz"
               descricao="Uéslei Suptitz"
+            />
+            <Link
+              icone={<LogoLinkedInIcon />}
+              link="https://www.linkedin.com/in/inaiaraseibel/"
+              title="Linkedin de Inaiara Seibel"
+              descricao="Inaiara Seibel"
+            />
+            <Link
+              icone={<LogoLinkedInIcon />}
+              link="https://www.linkedin.com/in/lservo/"
+              title="Linkedin de Lucas Servo"
+              descricao="Lucas Servo"
             />
           </s.GroupIcons>
         </s.ColumnIcons>
