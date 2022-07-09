@@ -50,6 +50,7 @@ export const ContainerForm = styled.div`
 
   @media (max-width: 767px) {
     max-width: 90%;
+    border-radius: 10px;
   }
 
   img {
