@@ -145,8 +145,8 @@ const Home = () => {
               />
               <InputButton
                 type="submit"
-                title="Acessar o GitHub do Projeto"
-                value="Ver perfil"
+                title="Acessar o GitHub de Carla Bruckmann"
+                value="GitHub"
                 onClick={() => {
                   window.open("https://github.com/CarlaBruckmann", "_blank");
                 }}
