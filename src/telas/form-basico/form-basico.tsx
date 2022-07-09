@@ -33,7 +33,7 @@ const FormBasico: React.FC = () => {
   const cancelar = (event: FormEvent) => {
     // Evita o redirecionamento padrão para outra tela e manda um alert
     event.preventDefault();
-    window.location.href = "/";
+    window.location.href = "/home";
   };
   return (
     <>

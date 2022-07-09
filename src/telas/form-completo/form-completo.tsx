@@ -34,7 +34,7 @@ const FormCompleto: React.FC = () => {
 
   const cancelar = (event: FormEvent) => {
     event.preventDefault();
-    window.location.href = "/";
+    window.location.href = "/home";
   };
   useEffect(() => {
     console.log("Deu certo!");
