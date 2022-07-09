@@ -4,7 +4,7 @@ import * as s from "./styled-header";
 const Header = () => {
   return (
     <s.Header>
-      <a href="/">
+      <a href="/home">
         <img src={LogoLetsDev} title="Clique para ir a Página Inicial" />
       </a>
       <a

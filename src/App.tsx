@@ -7,19 +7,17 @@ import {
   Home,
   ConsumindoApis,
   SobrePaipers,
+  Login,
 } from "./telas";
 
 function App() {
-  const [nomeUsuario, setNomeUsuario] = useState<string>();
+  const [nomeUsuario, setNomeUsuario] = useState<string>("");
 
   useEffect(() => {
     if (!nomeUsuario) {
       let nomeDoLocalStorage = localStorage.getItem("nomeUsuario");
       if (nomeDoLocalStorage) {
         setNomeUsuario(nomeDoLocalStorage);
-      } else {
-        let nomeInformado = prompt("Por favor, digite seu nome:");
-        if (nomeInformado) setNomeUsuario(nomeInformado);
       }
     } else {
       localStorage.setItem("nomeUsuario", nomeUsuario);
@@ -29,7 +27,8 @@ function App() {
     <MyContext.Provider value={{ nomeUsuario, setNomeUsuario }}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/form-basico" element={<FormBasico />} />
           <Route path="/form-completo" element={<FormCompleto />} />
           <Route path="/consumindo-apis" element={<ConsumindoApis />} />
